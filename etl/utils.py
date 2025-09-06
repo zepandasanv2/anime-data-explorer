@@ -26,7 +26,8 @@ def get_conn():
         user=os.getenv("PGUSER", "anime"),
         password=os.getenv("PGPASSWORD", "anime"),
         host=os.getenv("PGHOST", "localhost"),
-        port=int(os.getenv("PGPORT", 5432))
+        port=int(os.getenv("PGPORT", 5432)),
+        connect_timeout=5
     )
 
 if __name__ == "__main__":
